@@ -1,0 +1,359 @@
+@preamble{ "\newcommand{\noopsort}[1]{} "
+        # "\newcommand{\printfirst}[2]{#1} "
+        # "\newcommand{\singleletter}[1]{#1} "
+        # "\newcommand{\switchargs}[2]{#2#1} " }
+
+@ARTICLE{article-minimal,
+   author = {Leslie Andrew Aamport},
+   title = {Das System f{\"u}r die Vorbereitung von Dokumentationen {\"u}ber Gnats und Gnus},
+   journal = {Die Haustier-Zeitschrift},
+   year = 1986,
+   language = "german"
+}
+
+@ARTICLE{article-full,
+   author = {Leslie Andrew Aamport},
+   title = {Das System f{\"u}r die Vorbereitung von Dokumentationen {\"u}ber Gnats und Gnus},
+   journal = {Die Haustier-Zeitschrift},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   pages = "73\,ff.",
+   month = jul,
+   note = "Dies ist ein vollst{\"a}ndiger ARTICLE-Eintrag",
+}
+
+The KEY field is here to override the KEY field in the journal being
+cross referenced (so is the NOTE field, in addition to its imparting
+information).
+
+@ARTICLE{article-crossref,
+   crossref = {WHOLE-JOURNAL},
+   key = "",
+   author = {Leslie Andrew Aamport},
+   title = {Das System f{\"u}r die Vorbereitung von Dokumentationen {\"u}ber Gnats und Gnus},
+   pages = "73\,ff.",
+   note = "Dies ist ein querverweisender ARTICLE-Eintrag",
+}
+
+@ARTICLE{whole-journal,
+   key = "GAJ",
+   journal = {Die Haustier-Zeitschrift},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   month = jul,
+   note = {Dieses ganze Exemplar ist den Gnats und Gnus gewidmet
+                (dieser Eintrag ist ein ARTICLE (journal), auf den Verwiesen wurde)},
+}
+
+@INBOOK{inbook-minimal,
+   author = "Donald Edward Knuth",
+   title = "Fundamentale Algorithmen",
+   publisher = "Addison-Wesley",
+   year = "{\noopsort{1973b}}1973",
+   chapter = "1.2",
+}
+
+@INBOOK{inbook-full,
+   author = "Donald Edward Knuth",
+   title = "Fundamentale Algorithmen",
+   volume = 1,
+   series = "Die Kunst der Computerprogrammierung",
+   publisher = "Addison-Wesley",
+   address = "Reading, Massachusetts",
+   edition = "Zweite",
+   month = "10.~" # jan,
+   year = "{\noopsort{1973b}}1973",
+   type = "Kapitel",
+   chapter = "1.2",
+   pages = "10--119",
+   note = "Dies ist ein vollst{\"a}ndiger INBOOK-Eintrag",
+}
+
+@INBOOK{inbook-crossref,
+   crossref = "whole-set",
+   title = "Fundamentale Algorithmen",
+   volume = 1,
+   series = "Die Kunst der Computerprogrammierung",
+   edition = "Zweite",
+   year = "{\noopsort{1973b}}1973",
+   type = "Kapitel",
+   chapter = "1.2",
+   note = "Dies ist ein querverweisender INBOOK-Eintrag",
+}
+
+@BOOK{book-minimal,
+   author = "Donald Edward Knuth",
+   title = "Seminumerische Algorithmen",
+   publisher = "Addison-Wesley",
+   year = "{\noopsort{1973c}}1981",
+}
+
+@BOOK{book-full,
+   author = "Donald Edward Knuth",
+   title = "Seminumerische Algorithmen",
+   volume = 2,
+   series = "Die Kunst der Computerprogrammierung",
+   publisher = "Addison-Wesley",
+   address = "Reading, Massachusetts",
+   edition = "Zweite",
+   month = "10.~" # jan,
+   year = "{\noopsort{1973c}}1981",
+   note = "Dies ist ein vollst{\"a}ndiger BOOK-Eintrag",
+}
+
+@BOOK{book-crossref,
+   crossref = "whole-set",
+   title = "Seminumerische Algorithmen",
+   volume = 2,
+   series = "Die Kunst der Computerprogrammierung",
+   edition = "Zweite",
+   year = "{\noopsort{1973c}}1981",
+   note = "Dies ist ein querverweisender BOOK-Eintrag",
+}
+
+@BOOK{whole-set,
+   author = "Donald Edward Knuth",
+   publisher = "Addison-Wesley",
+   title = "Die Kunst der Computerprogrammierung",
+   series = "Vier B{\"a}nde",
+   year = "{\noopsort{1973a}}{\switchargs{--90}{1968}}",
+   note = "Sieben B{\"a}nde geplant (dies ist eine Reihe von BOOK(s), auf die verwiesen wird)",
+}
+
+@BOOKLET{booklet-minimal,
+   key = "Kn{\printfirst{v}{1987}}",
+   title = "Die Programmierung von Computerkunst",
+}
+
+@BOOKLET{booklet-full,
+   author = "Jill Clown Knvth",
+   title = "Die Programmierung von Computerkunst",
+   howpublished = "Kunstverein D{\"u}sseldorf",
+   address = "D{\"u}sseldorf, Nordrheinwestfalen",
+   month = feb,
+   year = 1988,
+   note = "Dies ist ein vollst{\"a}ndiger BOOKLET-Eintrag",
+}
+
+@INCOLLECTION{incollection-minimal,
+   author = "Daniel David Lincoll",
+   title = "Semigruppen von Wiederholungen",
+   booktitle = "High Speed Computer und Algorithmus Organisation",
+   publisher = "Universit{\"a}tsdruckerei",
+   year = 1977,
+}
+
+@INCOLLECTION{incollection-full,
+   author = "Daniel David Lincoll",
+   title = "Semigruppen von Wiederholungen",
+   editor = "David Johannes Lipcoll and Dirk Herwig Lawrie and Abraham Hans Sameh",
+   booktitle = "High Speed Computer und Algorithmus Organisation",
+   number = 23,
+   series = "Schnelle Computer",
+   chapter = 3,
+   type = "Teil",
+   pages = "179--183",
+   publisher = "Universit{\"a}tsdruckerei",
+   address = "Hintertupfingen am Bodensee",
+   edition = "Dritte",
+   month = sep,
+   year = 1977,
+   note = "Dies ist ein vollst{\"a}ndiger INCOLLECTION-Eintrag",
+}
+
+@INCOLLECTION{incollection-crossref,
+   crossref = "whole-collection",
+   author = "Daniel Depp Lincoll",
+   title = "Semigruppen von Wiederholungen",
+   pages = "179--183",
+   note = "Dies ist ein querverweisender INCOLLECTION-Eintrag",
+}
+
+@BOOK{whole-collection,
+   editor = "David Johannes Lipcoll and Dirk Herwig Lawrie and Abraham Hans Sameh",
+   title = "High Speed Computer und Algorithmus Organisation",
+   booktitle = "High Speed Computer und Algorithmus Organisation",
+   number = 23,
+   series = "Schnelle Computer",
+   publisher = "Universit{\"a}tsdruckerei",
+   address = "Hintertupfingen am Bodensee",
+   edition = "Dritte",
+   month = sep,
+   year = 1977,
+   note = "Dies ist ein BOOK-Eintrag (aus einer Reihe), auf den verwiesen wurde",
+}
+
+@MANUAL{manual-minimal,
+   key = "Handbuchmacher",
+   title = "Das definitive Computer-Handbuch",
+}
+
+@MANUAL{manual-full,
+   author = "Larry Manmaker",
+   title = "Das definitive Computer-Handbuch",
+   organization = "Microchips-Revelation-Deutschland",
+   address = "Silikontal",
+   edition = "Silberpfeil",
+   month = apr # "--" # may,
+   year = 1986,
+   note = "Dies ist ein vollst{\"a}ndiger MANUAL-Eintrag",
+}
+
+@MASTERSTHESIS{mastersthesis-minimal,
+   author = "{\'{E}}douard Masterly",
+   title = "Wie schreibe ich eine Diplomarbeit?",
+   school = "Universit{\"a}t W{\"u}rzfestung",
+   year = 1988,
+}
+
+@MASTERSTHESIS{mastersthesis-full,
+   author = "{\'{E}}douard Masterly",
+   title = "Wie schreibe ich eine Diplomarbeit?",
+   school = "Universit{\"a}t W{\"u}rzfestung",
+   type = "Projekt {\"u}ber Diplom- und Magisterarbeiten",
+   address = "Abteilung f{\"u}r Germanistik",
+   month = jun # "--" # aug,
+   year = 1988,
+   note = "Dies ist ein vollst{\"a}ndiger MASTERSTHESIS-Eintrag",
+}
+
+@MISC{misc-minimal,
+   key = "Vermixtes",
+   note = "Dies ist ein minimaler MISC-Eintrag",
+}
+
+@MISC{misc-full,
+   author = "Joe-Bob Missilany",
+   title = "Zuf{\"a}llige Verteilung von Pamphleten an Flugh{\"a}fen",
+   howpublished = "Ausgegeben in Frankfurt am Main",
+   month = oct,
+   year = 1984,
+   note = "Dies ist ein vollst{\"a}ndiger MISC-Eintrag",
+}
+
+@STRING{STOC-key = "OX{\singleletter{stoc}}"}
+
+@STRING{ACM = "OX-Vereinigung f{\"u}r Computing-Maschinerie"}
+
+@STRING{STOC = ": Symposium {\"u}ber die Theorie des Computing"}
+
+@INPROCEEDINGS{inproceedings-minimal,
+   author = "Alfred Veit Oaho and Jeffrey Dieter Ullman and Mihalis Yannakakis",
+   title = "Vorstellungen {\"u}ber die Informations{\"u}bertragung in {VLSI}-Schaltkreisen",
+   booktitle = "Konferenz zum f{\"u}nften Jahrestag der " # ACM # STOC,
+   year = 1983,
+}
+
+@INPROCEEDINGS{inproceedings-full,
+   author = "Alfred Veit Oaho and Jeffrey Dieter Ullman and Mihalis Yannakakis",
+   title = "Vorstellungen {\"u}ber die Informations{\"u}bertragung in {VLSI}-Schaltkreisen",
+   booktitle = "Konferenz zum f{\"u}nften Jahrestag der " # ACM # STOC,
+   editor = "Wizard Veit Oz and Mihalis Yannakakis",
+   number = 17,
+   series = "Alle Konferenzen der " # ACM,
+   pages = "133--139",
+   month = mar,
+   year = 1983,
+   address = "M{\"u}nchen",
+   organization = ACM,
+   publisher = "Universit{\"a}tsdruckerei",
+   note = "Dies ist ein vollst{\"a}ndiger INPROCEDINGS-Eintrag",
+}
+
+@INPROCEEDINGS{inproceedings-crossref,
+   crossref = "whole-proceedings",
+   author = "Alfred Veit Oaho and Jeffrey Dieter Ullman and Mihalis Yannakakis",
+   title = "Vorstellungen {\"u}ber die Informations{\"u}bertragung in {VLSI}-Schaltkreisen",
+   organization = "",
+   pages = "133--139",
+   note = "Dies ist ein querverweisender INPROCEEDINGS-Eintrag",
+}
+
+@PROCEEDINGS{proceedings-minimal,
+   key = STOC-key,
+   title = "Konferenz zum f{\"u}nften Jahrestag der " # ACM # STOC,
+   year = 1983,
+}
+
+@PROCEEDINGS{proceedings-full,
+   editor = "Wizard Veit Oz and Mihalis Yannakakis",
+   title = "Proc. Fifteenth Annual" # STOC,
+   number = 17,
+   series = "Alle Konferenzen der " # ACM,
+   month = mar,
+   year = 1983,
+   address = "M{\"u}nchen",
+   organization = ACM,
+   publisher = "Universit{\"a}tsdruckerei",
+   note = "Dies ist ein vollst{\"a}ndiger PROCEEDINGS-Eintrag",
+}
+
+@PROCEEDINGS{whole-proceedings,
+   key = STOC-key,
+   organization = ACM,
+   title = "Konferenz zum f{\"u}nften Jahrestag" # STOC,
+   address = "M{\"u}nchen",
+   year = 1983,
+   booktitle = "Konferenz zum f{\"u}nften Jahrestag der " # ACM # STOC,
+   note = "This is a cross-referenced PROCEEDINGS",
+}
+
+@PHDTHESIS{phdthesis-minimal,
+   author = "Friedrich Phidias Phony-Baloney",
+   title = "Feuer mit Feuer bek{\"a}mpfen: Gewandte Franz{\"o}sische Redewendungen",
+   school = "Fanstord Universit{\"a}t",
+   year = 1988,
+}
+
+@PHDTHESIS{phdthesis-full,
+   author = "Friedrich Phidias Phony-Baloney",
+   title = "Feuer mit Feuer bek{\"a}mpfen: Gewandte Franz{\"o}sische Redewendungen",
+   school = "Universit{\"a}t W{\"u}rzburg",
+   type = "Dissertation",
+   address = "Abteilung f{\"u}r Franz{\"o}sisch",
+   month = jun # "--" # aug,
+   year = 1988,
+   note = "Dies ist ein vollst{\"a}ndiger PHDTHESIS-Eintrag",
+}
+
+@TECHREPORT{techreport-minimal,
+   author = "Tom von Schrecklich",
+   title = "An {$O(n \log n / \! \log\log n)$} Sortier Algorithmus",
+   institution = "Universit{\"a}t W{\"u}rzburg",
+   year = 1988,
+}
+
+@TECHREPORT{techreport-full,
+   author = "Tom T{\'{e}}rrific",
+   title = "An {$O(n \log n / \! \log\log n)$} Sortier Algorithmus",
+   institution = "Universit{\"a}t W{\"u}rzburg",
+   type = "W{\"u}nschenswertes Untersuchungsergebnis",
+   number = "7",
+   address = "Abteilung f{\"u}r Computerwissenschaften, W{\"u}rzburg, Bayern",
+   month = oct,
+   year = 1988,
+   note = "Dies ist ein vollst{\"a}ndiger TECHREPORT-Eintrag",
+}
+
+@UNPUBLISHED{unpublished-minimal,
+   author = "Ulrich {\"{U}}nderwood and Ned {\~N}et and Paul {\={P}}ot",
+   title = "Niedrigere Grenzen f{\"u}r w{\"u}nschenswerte Untersuchungsergebnisse",
+   note = "Colloquium an der Universit{\"a}t W{\"u}rzburg (dies ist ein minimaler UNPUBLISHED-Eintrag)",
+}
+
+@UNPUBLISHED{unpublished-full,
+   author = "Ulrich {\"{U}}nderwood and Ned {\~N}et and Paul {\={P}}ot",
+   title = "Niedrigere Grenzen f{\"u}r w{\"u}nschenswerte Untersuchungsergebnisse",
+   month = nov # ", " # dec,
+   year = 1988,
+   note = "Colloquium an der Universit{\"a}t W{\"u}rzburg (dies ist ein vollst{\"a}ndiger UNPUBLISHED-Eintrag)",
+}
+
+@MISC{random-note-crossref,
+   key = {Volume-2},
+   note = "Band~2 ist unter Knuth \cite{book-full} aufgef{\"u}hrt"
+}
+
+   
