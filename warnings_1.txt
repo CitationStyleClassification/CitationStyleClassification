@@ -1,0 +1,25 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex)
+ restricted \write18 enabled.
+entering extended mode
+(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> File ignored)
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> ~
+     /Документы/генерация библиографий ТЕХ/...
+
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+<*> ~
+     /Документы/генерация библиографий ТЕХ/...
+
+No pages of output.
+Transcript written on .log.
