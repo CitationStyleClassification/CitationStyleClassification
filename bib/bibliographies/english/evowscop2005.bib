@@ -1,0 +1,872 @@
+%EvoCop 2005 Proceedings of 5th European Conference on Evolutionary Computation in Combinatorial Optimization
+%Gunther Raidl Tue, 25 Jan 2005 16:02:52 +0100
+%WBL 5 Feb 2005 add abstracts etc http://www.cs.essex.ac.uk/staff/W.Langdon/
+%WBL 17 May 2005 fix last page number
+
+@proceedings(evocop05,
+  title = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year =	2005,
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  volume = {3448},
+  series = {LNCS},
+  address =	{},
+  publisher_address =	{Berlin},
+  month =	{30 March-1 April},
+  publisher = {Springer Verlag},
+  note =	{},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =	{268 pages},
+  abstract =	{},
+  notes =	{EvoCOP2005}
+)
+
+
+@InProceedings{acan:evocop05,
+  author = {Adnan Acan},
+  title = {An External Partial Permutations Memory for Ant Colony Optimization},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {1--11},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {A novel external memory implementation based on the use
+  of partially complete sequences of solution components from
+  above-average quality individuals over a number of previous
+  iterations is introduced. Elements of such variable-size partial
+  permutation sequences are taken from randomly selected positions of
+  parental individuals and stored in an external memory called the
+  partial permutation memory. Partial permutation sequences are
+  associated with lifetimes together with their parent solutions'
+  fitness values that are used in retrieving and updating the contents
+  of the memory. When a solution is to be constructed, a partial
+  permutation sequence is retrieved from the memory based on its age
+  and associated fitness value, and the remaining components of the
+  partial solution is completed with an ant colony optimisation
+  algorithm. Resulting solutions are also used to update some elements
+  within the memory. The implemented algorithm is used for the
+  solution of a difficult combinatorial optimization problem, namely
+  the quadratic assignment problem, for which significant performance
+  achievements are provided in terms of convergence speed and solution
+  quality.},
+  notes =       {EvoCOP2005}
+}
+
+}
+
+@InProceedings{carballido:evocop05,
+  author = {Jessica Andrea Carballido and Ignacio Ponzoni and Nelida Beatriz Brignole},
+  title = {A Novel Application of Evolutionary Computing in Process Systems Engineering},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {12--22},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {a Multi-Objective Genetic Algorithm for Initialisation
+  (MOGAI) that finds a starting sensor configuration for Observability
+  Analysis (OA), this study being a crucial stage in the design and
+  revamp of process-plant instrumentation. The MOGAI is a binary-coded
+  genetic algorithm with a three-objective fitness function based on
+  cost, reliability and observability metrics. MOGAI?s special
+  features are: dynamic adaptive bit-flip mutation and guided
+  generation of the initial population, both giving a special
+  treatment to non-feasible individuals, and an adaptive genotypic
+  convergence criterion to stop the algorithm. The algorithmic
+  behaviour was evaluated through the analysis of the mathematical
+  model that represents an ammonia synthesis plant. Its efficacy was
+  assessed by comparing the performance of the OA algorithm with and
+  without MOGAI initialization. The genetic algorithm proved to be
+  advantageous because it led to a significant reduction in the number
+  of iterations required by the OA algorithm.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{chakhlevitch:evocop05,
+  author = {Konstantin Chakhlevitch and Peter Cowling},
+  title = {Choosing the Fittest Subset of Low Level Heuristics in a Hyperheuristic Framework},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {23--33},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {A hyperheuristic is a high level procedure which
+  searches over a space of low level heuristics rather than directly
+  over the space of problem solutions. The sequence of low level
+  heuristics, applied in an order which is intelligently determined by
+  the hyperheuristic, form a solution method for the problem. In this
+  paper, we consider a hyperheuristic-based methodology where a large
+  set of low level heuristics is constructed by combining simple
+  selection rules. Given sufficient time, this approach is able to
+  achieve high quality results for a real-world personnel scheduling
+  problem. However, some low level heuristics in the set do not make
+  valuable contributions to the search and only slow down the solution
+  process. We introduce learning strategies into hyper-heuristics in
+  order to select a fit subset of low level heuristics tailored to a
+  particular problem instance. We compare a range of selection
+  approaches applied to a varied collection of real-world personnel
+  scheduling problem instances.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{cleary:evocop05,
+  author = {Robert Cleary and Michael O'Neill},
+  title = {An Attribute Grammar Decoder for the 01 MultiConstrained Knapsack Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {34--45},
+  keywords =    {genetic algorithms, genetic programming, grammatical evolution, evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {We describe how the standard genotype-phenotype mapping
+  process of Grammatical Evolution (GE) can be enhanced with an
+  attribute grammar to allow GE to operate as a decoder-based
+  Evolutionary Algorithm (EA). Use of an attribute grammar allows GE
+  to maintain context-sensitive and semantic information pertinent to
+  the capacity constraints of the 01 Multi-constrained Knapsack
+  Problem (MKP). An attribute grammar specification is used to perform
+  decoding similar to a first-fit heuristic. The results presented are
+  encouraging, demonstrating that GE in conjunction with attribute
+  grammars can provide an improvement over the standard context-free
+  mapping process for problems in this domain.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{cordella:evocop05,
+  author = {Luigi Pietro Cordella and Claudio {De Stefano} and Francesco Fontanella and Angelo Marcelli},
+  title = {EvoGeneS, a New Evolutionary Approach to Graph Generation},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {46--57},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {Graphs are powerful and versatile data structures,
+  useful to represent complex and structured information of interest
+  in various fields of science and engineering. We present a system,
+  called EvoGeneS, based on an evolutionary approach, for generating
+  undirected graphs whose number of nodes is not a priori known. The
+  method is based on a special data structure, called multilist, which
+  encodes undirected attributed relational graphs. Two novel crossover
+  and mutation operators are defined in order to evolve such
+  structure. The developed system has been tested on a wireless
+  network configuration and the results compared with those obtained
+  by a genetic programming based approach recently proposed in the
+  literature.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{cotta:evocop05,
+  author = {Carlos Cotta},
+  title = {On the Application of Evolutionary Algorithms to the Consensus Tree Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {58--67},
+  keywords =    {genetic algorithms, genetic programming, evolutionary computation, evolution strategies, evolutionary programming},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {Computing consensus trees amounts to finding a single
+  tree that summarises a collection of trees. Three evolutionary
+  algorithms are defined for this problem, featuring characteristics
+  of genetic programming (GP), evolution strategies (ES) and
+  evolutionary programming (EP) respectively. These algorithms are
+  evaluated on a benchmark composed of phylogenetic trees computed
+  from genomic data. The GP-like algorithm is shown to provide better
+  results than the other evolutionary algorithms, and than two greedy
+  heuristics defined ad hoc for this problem.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{cotta2:evocop05,
+  author = {Carlos Cotta and Antonio J. Fern\'andez},
+  title = {Analyzing Fitness Landscapes for the Optimal Golomb Ruler Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {68--79},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {We focus on the Golomb ruler problem, a hard constrained
+  combinatorial optimisation problem. Two alternative encodings are
+  considered, one based on the direct representation of solutions, and
+  one based on the use of an auxiliary decoder. The properties of the
+  corresponding fitness landscapes are analysed. It turns out that the
+  landscape for the direct encoding is highly irregular, causing drift
+  to low-fitness regions. On the contrary, the landscape for the
+  indirect representation is regular, and exhibits comparable
+  fitness-distance correlation to that of the former landscape. These
+  findings are validated in the context of variable neighbourhood
+  search.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{cutello:evocop05,
+  author = {Vincenzo Cutello and Giuseppe Morelli and Giuseppe Nicosia and Mario Pavone},
+  title = {Immune Algorithms with Aging operators for the String Folding Problem and the Protein Folding Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {80--91},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {We present an Immune Algorithm (IA) based on clonal
+  selection principle and which uses memory B cells, to face the
+  protein structure prediction problem (PSP) a particular example of
+  the String Folding Problem in 2D and 3D lattice. Memory B cells with
+  a longer life span are used to partition the funnel landscape of
+  PSP, so to properly explore the search space. The designed IA shows
+  its ability to tackle standard benchmarks instances substantially
+  better than other IA's. In particular, for the 3D HP model the IA
+  allowed us to find energy minima not found by other evolutionary
+  algorithms described in literature.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{day:evocop05,
+  author = {Richard Day and Gary Lamont},
+  title = {Multiobjective Quadratic Assignment Problem Solved by an Explicit Building Block Search Algorithm -- MOMGA-IIa},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {92--101},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {The multi-objective quadratic assignment problem (mQAP)
+  is an non-deterministic polynomial-time complete (NPC) problem with
+  many real-world applications. The application addressed in this
+  paper is the minimisation of communication flows in a heterogenous
+  mix of Organic Air Vehicles (OAV). A multi-objective approach to
+  solving the general mQAP for this OAV application is developed. The
+  combinatoric nature of this problem calls for a stochastic search
+  algorithm; moreover, two linkage learning algorithms, the
+  multi-objective fast messy genetic algorithm (MOMGA-II) and
+  MOMGA-IIa, are compared. Twenty-three different problem instances
+  having three different sizes (10, 20, and 30) plus two and three
+  objectives are solved. Results indicate that the MOMGA-IIa resolves
+  all Pareto optimal points for problem instances <20.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{duda:evocop05,
+  author = {Jerzy Duda},
+  title = {Lot-Sizing in a Foundry Using Genetic Algorithm and Repair Functions},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {102--112},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {a study of genetic algorithms applied to a lot-sizing
+  problem, which has been formulated for an operational production
+  planning in a foundry. Three variants of genetic algorithm are
+  considered, each of them using special crossover and mutation
+  operators as well as repair functions. The real size test problems,
+  based on the data taken from the production control system, are
+  presented for assessment of the proposed algorithms. The obtained
+  results show that the genetic algorithm with two repair functions
+  can generate good suboptimal solutions in the time, which can be
+  acceptable from the decision maker point of view.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{handa:evocop05,
+  author = {Hisashi Handa},
+  title = {Estimation of Distribution Algorithms with Mutation},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {113--122},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {The Estimation of Distribution Algorithms are a class of
+evolutionary algorithms which adopt probabilistic models to reproduce
+the genetic information of the next generation, instead of
+conventional crossover and mutation operations. In this paper, we
+propose new EDAs which incorporate mutation operator to conventional
+EDAs in order to keep the diversities in EDA populations. Empirical
+experiments carried out this paper confirm us the effectiveness of the
+proposed methods.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{hemert:evocop05,
+  author = {Jano I. {van Hemert}},
+  title = {Property Analysis of Symmetric Travelling Salesman Problem Instances Acquired Through Evolution},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {123--132},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {We show how an evolutionary algorithm can successfully
+  be used to evolve a set of difficult to solve symmetric travelling
+  salesman problem instances for two variants of the Lin-Kernighan
+  algorithm. Then we analyse the instances in those sets to guide us
+  towards deferring general knowledge about the efficiency of the two
+  variants in relation to structural properties of the symmetric
+  travelling salesman problem.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{juhos:evocop05,
+  author = {Istv\'an Juhos and Attila T\'oth and Jano I. {van Hemert}},
+  title = {Heuristic Colour Assignment Strategies for Merge Models in Graph Colouring},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {133--144},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {we combine a powerful representation for graph colouring
+  problems with different heuristic strategies for colour
+  assignment. Our novel strategies employ heuristics that exploit
+  information about the partial colouring in an aim to improve
+  performance. An evolutionary algorithm is used to drive the
+  search. We compare the different strategies to each other on several
+  very hard benchmarks and on generated problem instances, and show
+  where the novel strategies improve the efficiency.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{lewis:evocop05,
+  author = {Rhydian Lewis and Ben Paechter},
+  title = {Application of the Grouping Genetic Algorithm to University Course Timetabling},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {145--154},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {University Course Timetabling-Problems (UCTPs) involve
+  the allocation of resources (such as rooms and timeslots) to all the
+  events of a university, satisfying a set of hard-constraints and, as
+  much as possible, some soft constraints. Here we work with a
+  well-known version of the problem where there seems a strong case
+  for considering these two goals as separate sub-problems. In
+  particular we note that the satisfaction of hard constraints fits
+  the standard definition of a grouping problem. As a result, a
+  grouping genetic algorithm for finding feasible timetables for hard
+  problem instances has been developed, with promising results.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{maruo:evocop05,
+  author = {Marcos H. Maruo and Heitor S. Lopes and Myriam R. Delgado},
+  title = {Self-Adapting Evolutionary Parameters: Encoding Aspects for Combinatorial Optimization Problems},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {155--166},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {Evolutionary algorithms are powerful tools in search and
+  optimisation tasks with several applications in complex engineering
+  problems. However, setting all associated parameters is not an easy
+  task and the adaptation seems to be an interesting alternative. This
+  paper aims to analyse the effect of self-adaptation of some
+  evolutionary parameters of genetic algorithms (GAs). Here we intend
+  to propose a flexible GA-based algorithm where only few parameters
+  have to be defined by the user. Benchmark problems of combinatorial
+  optimisation were used to test the performance of the proposed
+  approach.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{oliveira:evocop05,
+  author = {Alexandre C. M. Oliveira and Luiz A. N. Lorena},
+  title = {Population Training Heuristics},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {167--177},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {a way of employing problem-specific heuristics to
+  improve evolutionary algorithms: the Population Training Heuristic
+  (PTH). The PTH employs heuristics in fitness definition, guiding the
+  population to settle down in search areas where the individuals can
+  not be improved by such heuristics. Some new theoretical
+  improvements not present in early algorithms are now introduced. An
+  application for pattern sequencing problems is examined with new
+  improved computational results. The method is also compared against
+  other approaches, using benchmark},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{pantrigo:evocop05,
+  author = {Juan Jos\'e Pantrigo and Abraham Duarte and \'Angel S\'anchez and Ra\'ul Cabido},
+  title = {Scatter Search Particle Filter to Solve the Dynamic Travelling Salesman Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {178--189},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {the Scatter Search Particle Filter (SSPF) algorithm and
+  its application to the Dynamic Travelling Salesman Problem
+  (DTSP). SSPF combines sequential estimation and combinatorial
+  optimisation methods to improve the execution time in dynamic
+  optimization problems. It allows obtaining new high quality
+  solutions in subsequent iterations using solutions found in previous
+  time steps. The hybrid SSPF approach increases the performance of
+  general Scatter Search (SS) metaheuristic in dynamic optimization
+  problems. We have applied the SSPF algorithm to different DTSP
+  instances. Experimental results have shown that SSPF performance is
+  significantly better than classical DTSP approaches, where new
+  solutions of derived problems are obtained without taking advantage
+  of previous solutions corresponding to similar problems. Our
+  proposal reduces execution time appreciably without affecting the
+  quality of the estimated solution.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{raza:evocop05,
+  author = {Syed Asif Raza and Ali Akgunduz},
+  title = {The Use of Meta-Heuristics to Solve Economic Lot Scheduling Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {190--201},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {Economic lot scheduling problem has been an important
+  topic in production planning and scheduling research for more than
+  four decades. The problem is known to be NP-hard due to it's
+  combinatorial nature. In this paper, two meta-heuristics algorithms
+  - Tabu Search and Simulated Annealing - are proposed. To investigate
+  the effect of control parameters to the performance of tabu search
+  and simulated annealing algorithms, a general factorial design of
+  experiment study is used. Two Neighbourhood Search heuristics that
+  differ in rounding off scheme of the production frequencies are also
+  tested. Experimental study shows that both tabu search and simulated
+  annealing algorithms outperform two best known solution methods -
+  Dobson's Heuristic and Hybrid Genetic Algorithm.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{rothlauf:evocop05,
+  author = {Franz Rothlauf and Carsten Tzschoppe},
+  title = {Making the Edge-Set Encoding Fly by Controlling the Bias of its Crossover Operator},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {202--211},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {Edge-sets encode spanning trees directly by listing
+  their edges. Evolutionary operators for edge-sets may be heuristic,
+  considering the weights of edges they include in offspring, or
+  naive, including edges without regard to their weights. Crossover
+  operators that heuristically prefer shorter edges are strongly
+  biased towards minimum spanning trees (MST); EAs that apply
+  heuristic crossover generally perform poorly on spanning tree
+  problems whose optimum solutions are not very similar to MSTs. For
+  the edge-set encoding, a modified heuristic crossover called
+  $\gamma$-TX implements variable bias towards low-weight edges and
+  thus towards MSTs. The bias can be set arbitrarily between the
+  strong bias of the heuristic crossover operator, or being
+  unbiased. An investigation into the performance of EAs using the
+  $\gamma$-TX for randomly created OCST problems of different types
+  and OCST test instances from the literature present good results
+  when setting the crossover-specific parameter $\gamma$ properly. The
+  presented results suggest that the original heuristic crossover
+  operator of the edge-sets should be substituted by the modified
+  $\gamma$-TX operator that allows us to control the bias towards the
+  MST.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{sammoud:evocop05,
+  author = {Olfa Sammoud and Christine Solnon and Khaled Gh\'edira},
+  title = {Ant Algorithm for the Graph Matching Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {212--222},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {Ant Colony Optimisation (ACO) algorithm for solving
+  Graph Matching Problems, the goal of which is to find the best
+  matching between vertices of multi-labelled graphs. This new ACO
+  algorithm is experimentally compared with greedy and reactive tabu
+  approaches on subgraph isomorphism problems and on multivalent graph
+  matching problems.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{tang:evocop05,
+  author = {Maolin Tang},
+  title = {An Adaptive Genetic Algorithm for the Minimal Switching Graph Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {223--232},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {Minimal Switching Graph (MSG) is a graph-theoretic
+  representation of the constrained via minimisation problem -- a
+  combinatorial optimisation problem in integrated circuit design
+  automation. From a computational point of view, the problem is
+  NP-complete. Hence, a genetic algorithm (GA) was proposed to tackle
+  the problem, and the experiments showed that the GA was efficient
+  for solving large-scale via minimization problems. However, it is
+  observed that the GA is sensitive to the permutation of the genes in
+  the encoding scheme. For an MSG problem, if different permutations
+  of the genes are used the performances of the GA are quite
+  different. In this paper, we present a new GA for MSG
+  problem. Different from the original GA, this new GA has a
+  self-adaptive encoding mechanism that can adapt the permutation of
+  the genes in the encoding scheme to the underlying MSG
+  problem. Experimental results show that this adaptive GA outperforms
+  the original GA.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{victoire:evocop05,
+  author = {T. Aruldoss Albert Victoire and A. Ebenezer Jeyakumar},
+  title = {An Improved Simulated Annealing Method for the Combinatorial Sub-Problem of the Profit-Based Unit Commitment Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {233--244},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {an improved simulated annealing (SA) method for solving
+  the combinatorial sub-problem of profit-based unit commitment (UC)
+  problem in electric power and energy systems. The UC problem is
+  divided into a combinatorial sub-problem in unit status variables
+  and a non-linear programming sub-problem in unit power output
+  variables. The simulated annealing method with an improved random
+  perturbation of current solution scheme is proposed to solve the
+  combinatorial sub-problem. A simple scheme for generating initial
+  feasible commitment schedule for the SA method to solve the
+  combinatorial problem is also proposed. The non-linear programming
+  sub-problem is solved using the sequential quadratic programming
+  (SQP) technique. Several example systems are solved to validate the
+  robustness and effectiveness of the proposed technique for the
+  profit-based UC problem.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{zhang:evocop05,
+  author = {Chaoyong Zhang and Peigen Li and Yunqing Rao and Shuxia Li},
+  title = {A New Hybrid GA/SA Algorithm for the Job Shop Scheduling Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {245--258},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {Among the modern heuristic methods, simulated annealing
+  (SA) and genetic algorithms (GA) represent powerful combinatorial
+  optimisation methods with complementary strengths and
+  weaknesses. Borrowing from the respective advantages of the two
+  paradigms, an effective combination of GA and SA, called Genetic
+  Simulated Algorithm (GASA), is developed to solve the job shop
+  scheduling problem (JSP). This new algorithm incorporates metropolis
+  acceptance criterion into crossover operator, which could maintain
+  the good characteristics of the previous generation and reduce the
+  disruptive effects of genetic operators. Furthermore, we present two
+  novel features for this algorithm to solve JSP. Firstly, a new full
+  active schedule (FAS) based on the operation-based representation is
+  presented to construct schedule, which can further reduce the search
+  space. Secondly, we propose a new crossover operator, named
+  Precedence Operation Crossover (POX), for the operation-based
+  representation. The approach is tested on a set of standard
+  instances and compared with other approaches. The Simulation results
+  validate the effectiveness of the proposed algorithm.},
+  notes =       {EvoCOP2005}
+}
+
+
+@InProceedings{zhong:evocop05,
+  author = {Weicai Zhong and Jing Liu and Licheng Jiao},
+  title = {An Agent Model for Binary Constraint Satisfaction Problems},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization -- {EvoCOP}~2005},
+  year = {2005},
+  month = {30 March-1 April},
+  editor = {G\"{u}nther R. Raidl and Jens Gottlieb},
+  series = {LNCS},
+  volume = {3448},
+  publisher = {Springer Verlag},
+  address = {Lausanne, Switzerland},
+  publisher_address = {Berlin},
+  pages = {259--269},
+  keywords =    {evolutionary computation},
+  ISBN =        {},
+  ISSN =        {0302-9743},
+  doi =         {},
+  url =         {},
+  size =        {},
+  abstract = {With the intrinsic properties of constraint satisfaction
+  problems (CSPs) in mind, several behaviours are designed for agents
+  by making use of the ability of agents to sense and act on the
+  environment. These behaviors are controlled by means of evolution,
+  so that multiagent evolutionary algorithm for constraint
+  satisfaction problems (MAEA-CSPs) results. To overcome the
+  disadvantages of the general encoding methods, the minimum conflict
+  encoding is also proposed. The experiments use 250 benchmark CSPs to
+  test the performance of MAEA-CSPs, and compare it with four
+  well-defined algorithms. The results show that MAEA-CSPs outperforms
+  the other methods. In addition, the effect of the parameters is
+  analysed systematically.},
+  notes =       {EvoCOP2005}
+}
+
+
