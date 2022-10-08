@@ -1,6 +1,3 @@
-import pandas as pd
-import PyPDF2 as pdf
-import subprocess
 import os
 
 
@@ -16,6 +13,10 @@ def move_file(dir1, dir2, file):
     os.system('mv %(dir1)s/%(file)s %(dir2)s/' % {'dir1': dir1, 'file': file, 'dir2': dir2})
 
 
+def bibgen():
+    os.system('timeout 3 ../bash/bibgen.sh generate')
+
+
 path_en_bib = '../bib/bibliographies/english'
 path_en_bst = '../bst/BibTEX_styles/english_styles'
 path_rus_bib = '../bib/bibliographies/russian'
@@ -23,6 +24,7 @@ path_rus_bst = '../bst/BibTEX_styles/russian_styles'
 path_de_bib = '../bib/bibliographies/deutsch'
 path_de_bst = '../bst/BibTEX_styles/deutsch_styles'
 current_dir = '.'
+unprocessed_files = open('../problems/unprocessed_files.txt', 'w')
 
 for bib in os.listdir(path_en_bib):
     copy_file(path_en_bib, current_dir, bib)
@@ -44,23 +46,30 @@ for bib in os.listdir(path_en_bib):
         template_file.close()
         generation_file.close()
 
-        os.system('../bash/bibgen.sh generate')
+        print(bib_name, bst_name)
+
+        bibgen()
 
         # теперь надо переместить сгенерированный pdf куда надо и удалить файлы, созданные при компиляции tex (aux,
         # bl, dvi и т.д.)
-        new_pdf_name = '%(bib_name)s_%(bst_name)s.pdf' % {'bib_name': bib_name, 'bst_name': bst_name}
-        os.rename('generate.pdf', new_pdf_name)
-        move_file(current_dir, '../pdf', new_pdf_name)
 
         will_remove_files = []
         for file in os.listdir(current_dir):
-            if ('.py' in file) or ('.txt' in file):
+            if ('.py' in file) or ('.txt' in file) or ('.bib' in file) or ('.pdf' in file):
                 continue
             else:
                 will_remove_files.append(file)
         for file in will_remove_files:
             remove_file(current_dir, file)
 
+        if 'generate.pdf' not in os.listdir(current_dir):
+            unprocessed_files.write(bib_name + ' ' + bst_name + '\n')
+        else:
+            new_pdf_name = '%(bib_name)s_%(bst_name)s.pdf' % {'bib_name': bib_name, 'bst_name': bst_name}
+            os.rename('generate.pdf', new_pdf_name)
+            move_file(current_dir, '../pdf', new_pdf_name)
+
     remove_file(current_dir, bib)
 
+unprocessed_files.close()
 print("PDF-файлы успешно сгенерированы!")
