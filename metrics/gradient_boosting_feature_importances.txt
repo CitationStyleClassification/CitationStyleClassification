@@ -1,0 +1,23 @@
+ 	Feature Id 	Importances
+0 	begin_ref 	28.208718
+1 	round_brackets 	21.112616
+2 	ampersands 	20.271157
+3 	dots 	7.069522
+4 	slashes 	3.701281
+5 	commas 	2.887570
+6 	page_ref 	2.767519
+7 	colons 	2.713903
+8 	et_al 	2.494983
+9 	quotes 	2.478556
+10 	capital_letters 	2.317323
+11 	ands 	1.703854
+12 	semicolons 	0.841287
+13 	years 	0.592034
+14 	key 	0.354976
+15 	square_brackets 	0.258836
+16 	tirets 	0.223033
+17 	sine 	0.002833
+18 	inverse_slashes 	0.000000
+19 	abstract 	0.000000
+20 	annotation 	0.000000
+21 	etc 	0.000000
