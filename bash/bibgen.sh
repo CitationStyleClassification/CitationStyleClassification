@@ -2,8 +2,8 @@
 
 filename=$1".tex"
 
-latex $filename > /dev/null
-bibtex $1 > /dev/null
-latex $filename > /dev/null
-latex $filename > /dev/null
-pdflatex $filename > /dev/null
+yes "" | latex $filename > /dev/null
+yes "" | bibtex $1 > /dev/null
+yes "" | latex $filename > /dev/null
+yes "" | latex $filename > /dev/null
+yes "" | pdflatex $filename > /dev/null

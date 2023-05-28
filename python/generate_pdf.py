@@ -13,26 +13,35 @@ def move_file(dir1, dir2, file):
     os.system('mv %(dir1)s/%(file)s %(dir2)s/' % {'dir1': dir1, 'file': file, 'dir2': dir2})
 
 
-def bibgen():
-    os.system('timeout 3 ../bash/bibgen.sh generate')
+def bibgen(timeout=3):
+    os.system('timeout %(timeout)i ../bash/bibgen.sh generate' % {'timeout': timeout})
 
 
 path_en_bib = '../bib/bibliographies/english'
 path_en_bst = '../bst/BibTEX_styles/english_styles'
-path_rus_bib = '../bib/bibliographies/russian'
-path_rus_bst = '../bst/BibTEX_styles/russian_styles'
+path_ru_bib = '../bib/bibliographies/russian'
+path_ru_bst = '../bst/BibTEX_styles/russian_styles'
 path_de_bib = '../bib/bibliographies/deutsch'
 path_de_bst = '../bst/BibTEX_styles/deutsch_styles'
 current_dir = '.'
 unprocessed_files = open('../problems/unprocessed_files.txt', 'w')
+generated_pdf = sorted(os.listdir('../pdf'))
 
-for bib in os.listdir(path_en_bib):
+for bib in sorted(os.listdir(path_en_bib)):
     copy_file(path_en_bib, current_dir, bib)
     bib_name = bib[:bib.rfind('.')]
 
-    for bst in os.listdir(path_en_bst):
+    for bst in sorted(os.listdir(path_en_bst)):
+        if 'gost' not in bst:
+            continue
         copy_file(path_en_bst, current_dir, bst)
         bst_name = bst[:bst.rfind('.')]
+
+        # если наш pdf уже сгенерирован
+        if bib_name + '_' + bst_name + '.pdf' in generated_pdf:
+            remove_file(current_dir, bst)
+            continue
+
         template_file = open('generation_template.txt')
         generation_template = template_file.read()
 
@@ -48,7 +57,7 @@ for bib in os.listdir(path_en_bib):
 
         print(bib_name, bst_name)
 
-        bibgen()
+        bibgen(timeout=60)
 
         # теперь надо переместить сгенерированный pdf куда надо и удалить файлы, созданные при компиляции tex (aux,
         # bl, dvi и т.д.)
