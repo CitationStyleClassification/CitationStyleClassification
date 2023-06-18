@@ -26,9 +26,9 @@ def begin_ref(s):
     [Ackley, 1985] - #5
     [Ackley 1985] - #6
     [A Connectionist Algorithm for Genetic SearchAckley1985] - #7
-    [] - #8 (стиль namunsrt)
+    [] - #8 (namunsrt)
     [Ackley 85] - #9
-    [Ackl 85] - #10 (фамилия автора сокращена до 4 букв)
+    [Ackl 85] - #10
     [Ackley1985], [Alba, Aldana, and TroyaAlba et al.1993] - #11
     '''
     if not begin:
