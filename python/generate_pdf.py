@@ -37,7 +37,6 @@ for bib in sorted(os.listdir(path_en_bib)):
         copy_file(path_en_bst, current_dir, bst)
         bst_name = bst[:bst.rfind('.')]
 
-        # если наш pdf уже сгенерирован
         if bib_name + '_' + bst_name + '.pdf' in generated_pdf:
             remove_file(current_dir, bst)
             continue
@@ -59,9 +58,6 @@ for bib in sorted(os.listdir(path_en_bib)):
 
         bibgen(timeout=60)
 
-        # теперь надо переместить сгенерированный pdf куда надо и удалить файлы, созданные при компиляции tex (aux,
-        # bl, dvi и т.д.)
-
         will_remove_files = []
         for file in os.listdir(current_dir):
             if ('.py' in file) or ('.txt' in file) or ('.bib' in file) or ('.pdf' in file):
@@ -81,4 +77,4 @@ for bib in sorted(os.listdir(path_en_bib)):
     remove_file(current_dir, bib)
 
 unprocessed_files.close()
-print("PDF-файлы успешно сгенерированы!")
+print("PDF files successfully generated!")
