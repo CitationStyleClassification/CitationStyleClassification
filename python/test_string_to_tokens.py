@@ -93,6 +93,3 @@ class Test(TestCase):
             ''.join(tokens),
             ''.join(right_answer)
         )
-
-        # TODO: написать ещё тесты!
-        # TODO: затем сформировать новый датасет
