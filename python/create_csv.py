@@ -31,40 +31,6 @@ def read_pdf_pdfium(path_to_pdf):
         pdf_errors.write("Pdfium Error in file" + path_to_pdf + '\n')
         return ""
 
-
-'''
-Описание фичей:
-(Везде под словом "количество" имеем в виду "количество в одной библиографической записи)
-    * square_brackets (SB) := количество пар квадратных скобок []
-    * round_brackets (RB) := количество пар круглых скобок ()
-    * slashes (SL) := количество слэшей /
-    * inverse_slashes (IS) := количество обратных слэшей \
-    * quotes (QM) := количество пар кавычек (”) // по крайней мере, в ГОСТ-стилях они выглядят так
-    * dots (DT) := количество точек .
-    * commas (CM) := количество запятых ,
-    * semicolons (SC) := количество точек с запятой ;
-    * colons (CN) := количество двоеточий :
-    * abstract (AB) = [0, 1] := наличие слова "Abstract" или "abstract" в записи
-    * ands (AND) := количество слов "and" в записи (русские bib с иностранными стилями, где and вставляется по ошибке, не используем)
-    * ampersands (AS) := количество амперсандов &
-    * page_ref (PR) := тип ссылки на страницу (p., P., pp., стр., С.) (занумеровать их числами === ENUM)
-    * begin_ref (BR) := тип начала библиографической записи ([1], [TrD90], [Ski(2022)], [SDD, 99]) === ENUM
-    * tirets (TT) := количество тире и дефисов
-    * key (KY) := наличие слова Key: в записи
-    * annotation (AN) := наличие слова Annotation в записи
-    * capital_letters (CL) := доля слов, начинающихся с заглавной буквы (заглавные / общее число)
-    * years (YR) := число чисел, похожих на год (2022, 22, 90, 1990) в строке (в некоторых стилях год может дублироваться)
-    * sine (SN) = [0, 1, 2, 3] := есть ли сокращения [s.l.] и [s.n.] (0 = нет, 1 = s.l., 2 = [s.l.], 3 = (s.l.) )
-    * et_al (EA) = [0, 1, 2, 3] := есть ли сокращение et al. (0 = нет, 1 = et al., 2 = [et al.], 3 = (et al.) )
-    * etc (EC) = [0, 1] := есть ли сокращение etc.
-        
-    * author_name_order (ANO) := порядок, в котором следует ФИО автора ("инициалы фамилия" или "фамилия инициалы")
-    * author_title_order (ATO) := порядок, в котором следуют автор, название, год и издательство
-    ВОПРОС: как мы будем определять, где автор, где название, где издательство? (может, придётся парсить соответствующий BIB-файл)
-    * 
-'''
-
-
 def square_brackets(s):
     return s.count('[')
 
@@ -125,12 +91,10 @@ def page_ref(s):
 
 
 def tirets(s):
-    # return s.count('-') + s.count('—')
-    return s.count('—')  # кое-где дефис ставится при переносе строки, что может испортить статистику
+    return s.count('—')
 
 
 def years(s):
-    # подсчитываем количество чисел, похожих на год
     cnt = 0
     for i in range(50, 99):
         if str(i) in s:
@@ -176,11 +140,11 @@ def begin_ref(s):
     [Ackley, 1985] - #5
     [Ackley 1985] - #6
     [A Connectionist Algorithm for Genetic SearchAckley1985] - #7
-    [] - #8 (стиль namunsrt)
+    [] - #8 (style namunsrt)
     [Ackley 85] - #9
-    [Ackl 85] - #10 (фамилия автора сокращена до 4 букв)
+    [Ackl 85] - #10
     [Ackley1985], [Alba, Aldana, and TroyaAlba et al.1993] - #11
-    [Abelson:1985:SIC] - #12 (стиль abstract)
+    [Abelson:1985:SIC] - #12 (style abstract)
     '''
     if not begin:
         return 8
@@ -299,16 +263,16 @@ for pdf_file in os.listdir(pdf_path):
                             buffer = ""
             buffer += line
         if buffer != "":
-            bib_records.append(buffer)  # если в буфере ещё что-то есть, его нужно записать куда надо
+            bib_records.append(buffer)
 
         processed_files.write(f"{pdf_file} SUCCESS\n")
         temp_file.close()
         os.remove('temp_file.txt')
     except FileExistsError:
-        pdf_errors.write(f"Файл {pdf_file} не существует\n")
+        pdf_errors.write(f"File {pdf_file} is not exist\n")
         processed_files.write(f"{pdf_file} ERROR\n")
     except FileNotFoundError:
-        pdf_errors.write(f"Файл {pdf_file} не найден\n")
+        pdf_errors.write(f"File {pdf_file} did not find\n")
         processed_files.write(f"{pdf_file} ERROR\n")
 
     for record in bib_records:
