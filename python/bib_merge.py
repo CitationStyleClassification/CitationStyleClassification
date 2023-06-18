@@ -4,8 +4,6 @@ import os
 def file_size_MB(my_file):
     return os.stat(my_file).st_size / (1024 * 1024)
 
-
-# файлы для объединения
 english_bib_1 = open('/home/artyom/Документы/библиографии/english_1.bib', 'w')
 english_bib_2 = open('/home/artyom/Документы/библиографии/english_2.bib', 'w')
 russian_bib = open('/home/artyom/Документы/библиографии/russian.bib', 'w')
