@@ -26,7 +26,7 @@ def read_pdf_pdfium(path_to_pdf):
             s += pdf.get_page(i).get_textpage().get_text_range()
         return s
     except PdfiumError as e:
-        print("Ошибка чтения PDF-файла")
+        print("PDF reading error")
         pdf_errors.write("Pdfium Error in file" + path_to_pdf + '\n')
         return ""
 
@@ -66,7 +66,7 @@ for pdf_file in os.listdir(pdf_path):
 
         temp_file = open('temp_file.txt', 'r')
         for line in temp_file:
-            if onlyDigits(line) or 'Список литературы' in line:  # тогда это строка с номером страницы ???
+            if onlyDigits(line) or 'Список литературы' in line:
                 continue
             if line[0] == '[':
                 ref = line[line.find('[') + 1: line.find(']')]
@@ -90,16 +90,16 @@ for pdf_file in os.listdir(pdf_path):
                             buffer = ""
             buffer += line
         if buffer != "":
-            bib_records.append(buffer)  # если в буфере ещё что-то есть, его нужно записать куда надо
+            bib_records.append(buffer)
 
         processed_files.write(f"{pdf_file} SUCCESS\n")
         temp_file.close()
         os.remove('temp_file.txt')
     except FileExistsError:
-        pdf_errors.write(f"Файл {pdf_file} не существует\n")
+        pdf_errors.write(f"File {pdf_file} does not exist\n")
         processed_files.write(f"{pdf_file} ERROR\n")
     except FileNotFoundError:
-        pdf_errors.write(f"Файл {pdf_file} не найден\n")
+        pdf_errors.write(f"File {pdf_file} did not find\n")
         processed_files.write(f"{pdf_file} ERROR\n")
     for record in bib_records:
         list_of_records.append([
